@@ -1,0 +1,58 @@
+LAPI_C="lapi.c lua.h luaconf.h lapi.h lobject.h llimits.h ldebug.h 
+ lstate.h ltm.h lzio.h lmem.h ldo.h lfunc.h lgc.h lstring.h ltable.h 
+ lundump.h lvm.h"
+LAUXLIB_C="lauxlib.c lua.h luaconf.h lauxlib.h"
+LBASELIB_C="lbaselib.c lua.h luaconf.h lauxlib.h lualib.h"
+LCODE_C="lcode.c lua.h luaconf.h lcode.h llex.h lobject.h llimits.h 
+ lzio.h lmem.h lopcodes.h lparser.h ldebug.h lstate.h ltm.h ldo.h lgc.h 
+ ltable.h"
+LDBLIB_C="ldblib.c lua.h luaconf.h lauxlib.h lualib.h"
+LDEBUG_C="ldebug.c lua.h luaconf.h lapi.h lobject.h llimits.h lcode.h 
+ llex.h lzio.h lmem.h lopcodes.h lparser.h ldebug.h lstate.h ltm.h ldo.h 
+ lfunc.h lstring.h lgc.h ltable.h lvm.h"
+LDO_C="ldo.c lua.h luaconf.h ldebug.h lstate.h lobject.h llimits.h ltm.h 
+ lzio.h lmem.h ldo.h lfunc.h lgc.h lopcodes.h lparser.h lstring.h 
+ ltable.h lundump.h lvm.h"
+LDUMP_C="ldump.c lua.h luaconf.h lobject.h llimits.h lstate.h ltm.h 
+ lzio.h lmem.h lundump.h"
+LFUNC_C="lfunc.c lua.h luaconf.h lfunc.h lobject.h llimits.h lgc.h lmem.h 
+ lstate.h ltm.h lzio.h"
+LGC_C="lgc.c lua.h luaconf.h ldebug.h lstate.h lobject.h llimits.h ltm.h 
+ lzio.h lmem.h ldo.h lfunc.h lgc.h lstring.h ltable.h"
+LINIT_C="linit.c lua.h luaconf.h lualib.h lauxlib.h"
+LIOLIB_C="liolib.c lua.h luaconf.h lauxlib.h lualib.h"
+LLEX_C="llex.c lua.h luaconf.h ldo.h lobject.h llimits.h lstate.h ltm.h 
+ lzio.h lmem.h llex.h lparser.h lstring.h lgc.h ltable.h"
+LMATHLIB_C="lmathlib.c lua.h luaconf.h lauxlib.h lualib.h"
+LMEM_C="lmem.c lua.h luaconf.h ldebug.h lstate.h lobject.h llimits.h 
+ ltm.h lzio.h lmem.h ldo.h"
+LOADLIB_C="loadlib.c lua.h luaconf.h lauxlib.h lualib.h"
+LOBJECT_C="lobject.c lua.h luaconf.h ldo.h lobject.h llimits.h lstate.h 
+ ltm.h lzio.h lmem.h lstring.h lgc.h lvm.h"
+LOPCODES_C="lopcodes.c lopcodes.h llimits.h lua.h luaconf.h"
+LOSLIB_C="loslib.c lua.h luaconf.h lauxlib.h lualib.h"
+LPARSER_C="lparser.c lua.h luaconf.h lcode.h llex.h lobject.h llimits.h 
+ lzio.h lmem.h lopcodes.h lparser.h ldebug.h lstate.h ltm.h ldo.h lfunc.h 
+ lstring.h lgc.h ltable.h"
+LSTATE_C="lstate.c lua.h luaconf.h ldebug.h lstate.h lobject.h llimits.h 
+ ltm.h lzio.h lmem.h ldo.h lfunc.h lgc.h llex.h lstring.h ltable.h"
+LSTRING_C="lstring.c lua.h luaconf.h lmem.h llimits.h lobject.h lstate.h 
+ ltm.h lzio.h lstring.h lgc.h"
+LSTRLIB_C="lstrlib.c lua.h luaconf.h lauxlib.h lualib.h"
+LTABLE_C="ltable.c lua.h luaconf.h ldebug.h lstate.h lobject.h llimits.h 
+ ltm.h lzio.h lmem.h ldo.h lgc.h ltable.h"
+LTABLIB_C="ltablib.c lua.h luaconf.h lauxlib.h lualib.h"
+LTM_C="ltm.c lua.h luaconf.h lobject.h llimits.h lstate.h ltm.h lzio.h 
+ lmem.h lstring.h lgc.h ltable.h"
+LUA_C="lua.c lua.h luaconf.h lauxlib.h lualib.h"
+LUAC_C="luac.c lua.h luaconf.h lauxlib.h ldo.h lobject.h llimits.h 
+ lstate.h ltm.h lzio.h lmem.h lfunc.h lopcodes.h lstring.h lgc.h 
+ lundump.h"
+LUNDUMP_C="lundump.c lua.h luaconf.h ldebug.h lstate.h lobject.h 
+ llimits.h ltm.h lzio.h lmem.h ldo.h lfunc.h lstring.h lgc.h lundump.h"
+LVM_C="lvm.c lua.h luaconf.h ldebug.h lstate.h lobject.h llimits.h ltm.h 
+ lzio.h lmem.h ldo.h lfunc.h lgc.h lopcodes.h lstring.h ltable.h lvm.h"
+LZIO_C="lzio.c lua.h luaconf.h llimits.h lmem.h lstate.h lobject.h ltm.h 
+ lzio.h"
+PRINT_C="print.c ldebug.h lstate.h lua.h luaconf.h lobject.h llimits.h 
+ ltm.h lzio.h lmem.h lopcodes.h lundump.h"

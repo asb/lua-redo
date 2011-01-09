@@ -1,0 +1,6 @@
+buildconfig
+.redo
+*.o
+*.a
+src/lua
+src/luac
