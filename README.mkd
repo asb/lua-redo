@@ -1,0 +1,4 @@
+Build Lua 5.1.4 using the [redo](https://github.com/apenwarr/redo) build system.
+
+This is meant to serve as a simple example for converting a clean 
+Makefile-based project to redo, though a few problems must be worked out.
