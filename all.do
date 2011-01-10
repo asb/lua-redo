@@ -1,4 +1,4 @@
-redo-ifchange platform
+redo-ifchange buildconfig platform
 
 if [ $(cat platform) = 'mingw' ]; then
   redo-ifchange src/lua51.dll src/lua.exe src/luac.exe
