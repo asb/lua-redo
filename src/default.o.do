@@ -1,4 +1,4 @@
-redo-ifchange $1.c deps ../buildconfig
+redo-ifchange $1.c ../buildconfig
 
 TR_FN=$(echo $1 | tr a-z A-Z)_C
 . ./deps
