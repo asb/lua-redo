@@ -44,8 +44,12 @@ case "$PLAT" in
     MYLIBS="-lreadline"
     ;;
   mingw)
-    echo "mingw not supported yet"
-    exit 1
+    LUA_A="lua51.dll"
+    AR="$CC -shared -o"
+    RANLIB="strip --strip-unneeded"
+    MYCFLAGS="-DLUA_BUILD_AS_DLL"
+    MYLIBS=""
+    MYLDFLAGS="-s"
     ;;
   posix)
     MYCFLAGS=-DLUA_USE_POSIX
@@ -67,6 +71,7 @@ echo "building for platform $PLAT"
 : ${CFLAGS="-O2 -Wall $MYCFLAGS"}
 : ${AR="ar rcu"}
 : ${RANLIB="ranlib"}
+: ${LUA_A="liblua.a"}
 : ${LIBS="-lm $MYLIBS"}
 
 echo "\
@@ -74,6 +79,7 @@ CC=\"$CC\"
 CFLAGS=\"$CFLAGS\"
 AR=\"$AR\"
 RANLIB=\"$RANLIB\"
+LUA_A=\"$LUA_A\"
 LIBS=\"$LIBS\"
 MYCFLAGS=\"$MYCFLAGS\"
 MYLDFLAGS=\"$MYLDFLAGS\"

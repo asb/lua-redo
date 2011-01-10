@@ -1,4 +1,6 @@
-redo-ifchange lua.o liblua.a ../buildconfig
-. ../buildconfig
+redo-ifchange ../buildconfig
 
-$CC -o $3 $MYLDFLAGS lua.o liblua.a $LIBS
+. ../buildconfig
+redo-ifchange lua.o $LUA_A
+
+$CC -o $3 $MYLDFLAGS lua.o $LUA_A $LIBS
