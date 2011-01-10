@@ -2,6 +2,18 @@ exec >&2
 
 PLATS="aix ansi bsd freebsd generic linux macosx mingw posix solaris"
 
+if [ ! -f platform ]; then
+  echo "Unset platform type. Please do"
+  echo "   echo PLATFORM > platform && redo"
+  echo "where PLATFORM is one of these:"
+  echo "   $PLATS"
+  exit 1
+fi
+
+redo-ifchange platform
+
+PLAT=$(cat platform)
+
 case "$PLAT" in
   aix)
     CC="xlc"
@@ -43,9 +55,7 @@ case "$PLAT" in
     MYLIBS="-ldl"
     ;;
   *)
-    echo "Unrecognised or unset platform type. Please do"
-    echo "   PLAT=PLATFORM redo"
-    echo "where PLATFORM is one of these:"
+    echo "Unrecognised platform. Re-edit the platform file to contain one of:"
     echo "   $PLATS"
     exit 1
     ;;
@@ -60,7 +70,6 @@ echo "building for platform $PLAT"
 : ${LIBS="-lm $MYLIBS"}
 
 echo "\
-PLAT=\"$PLAT\"
 CC=\"$CC\"
 CFLAGS=\"$CFLAGS\"
 AR=\"$AR\"
@@ -69,3 +78,6 @@ LIBS=\"$LIBS\"
 MYCFLAGS=\"$MYCFLAGS\"
 MYLDFLAGS=\"$MYLDFLAGS\"
 MYLIBS=\"$MYLIBS\"" > $3
+
+redo-stamp < $3
+redo-always
