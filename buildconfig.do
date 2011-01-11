@@ -2,14 +2,6 @@ exec >&2
 
 PLATS="aix ansi bsd freebsd generic linux macosx mingw posix solaris"
 
-if [ ! -f platform ]; then
-  echo "Unset platform type. Please do"
-  echo "   echo PLATFORM > platform && redo"
-  echo "where PLATFORM is one of these:"
-  echo "   $PLATS"
-  exit 1
-fi
-
 redo-ifchange platform
 
 PLAT=$(cat platform)
